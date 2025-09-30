@@ -1,11 +1,178 @@
-<!doctype html>
-<html>
-  <head>
-<meta charset="utf-8" />
-	<title>Hello World</title>
-  </head>
-  <body>
-<h1>Introduction</h1>
-<p>I am <em>Tobi</em></p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- all unicode characters displayable, incl. emojis -->
+    <meta charset="UTF-8">
+    <!-- add the following line if you know your web page works well on mobile phone display
+     (narrow screen, adjust to screen width, no scaling) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- The fonts from fonts.google.com can be found here, they will be used in the body of this html. -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script>
+        console.log("Hello World");
+        window.alert("Hello World");
+        document.addEventListener('DOMContentLoaded', e => {
+            let el = document.querySelector("#world");
+            el.style.color="green";
+        });
+
+
+    </script>
+
+    <style>
+        /* At this point, the language switches to CSS. */
+        .logo {
+            position: absolute;
+            top: 200px; left: 300px; width: 4ex;
+            font-size: 200px;
+            background-color: white;
+            transform: rotate(0deg);
+            transform-origin: 2ex 1ex;
+            transition: transform 1s;
+        }
+
+        .logo:hover {
+            transform: rotate(360deg);
+            transition: transform 5s;
+        }
+
+        .sans { font-family: 'Open Sans',sans-serif;}
+        h1 {
+            background-color: pink;
+            color:yellow;
+            font-family: Helvetica;
+            font-style: italic;
+            font-weight: normal;
+            padding: 10px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        h2 {
+            border-width: 1px;
+            border-color: palevioletred;
+            border-style: solid;
+            padding: 10px 15px;
+            width: fit-content;
+            border-radius: 6px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            border: 2px solid black;
+        }
+        th {
+            border: 2px solid black; /* Adds borders between cells */
+            padding: 8px;
+            text-align: left;
+        }
+        td {
+            border: 1px solid black; /* Adds borders between cells */
+            padding: 8px;
+            text-align: left;
+        }
+        .redColor .yellowColor { color: orange;}
+        .yellowColor { color: yellow; }
+        .redColor { color: red; }
+        .boldFont { font-weight: bold; }
+
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+        .item {
+            flex-grow: 1; /* Flexible boxes adapt to screenwidth, practical for mobile friendly pages */
+            height: 100px;
+            border: dashed 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sans">Hello World</div>
+
+    <div id="world">Hello World</div>
+
+
+    <h1>Hello, World!</h1>
+    <!-- <h2 style="border: 2px solid palevioletred;">This is a heading with a palevioletred border</h2> -->
+    <h2>Hello, World! #2</h2>
+    <p>This is a sample HTML document.</p>
+
+    <div class="container">
+       <div class="item">A</div>
+       <div class="item">B</div>
+       <div class="item">C</div>
+    </div>
+
+
+    <div class="redColor secondClass">
+        <div class="yellowColor">Hello</div>
+        <div class="boldFont">World</div>
+    </div>
+    <div class="yellowColor">WWF</div>
+
+    <!-- <p>This is an image of me and my friend. We went to ETH together and completed our bachelor degree in Environmental Engineering.<br>
+    <img src="hihi.jpg" alt="Happy"/>
+    </p> -->
+
+    <div class="logo">
+        ETH
+    </div>
+
+
+    <p>This is a random picture from the web:<br>
+    <!-- This works for images from the web. Be careful of copyright issues! -->
+    <img src="https://picsum.photos/seed/{99}/320/240" alt="Example Image"/>
+    <!-- This also works: https://picsum.photos/640/480, but you will get a different picture every time.  -->
+    </p>
+
+    <p>This is a
+    <a href="https://www.google.com">Link</a>  
+    to Google.</p>
+
+    <p>This is a Table with 3 columns and 4 rows:
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Data 1.1</td>
+            <td>Data 2.1</td>
+            <td>Data 3.1</td>
+        </tr>
+        <tr>
+            <td>Data 1.2</td>
+            <td>Data 2.2</td>
+            <td>Data 3.2</td>
+        </tr>
+        <tr>
+            <td>Data 1.3</td>
+            <td>Data 2.3</td>
+            <td>Data 3.3</td>
+        </tr>
+    </table>
+    </p>
+
+    <p>This is a shopping list:
+    <ul>
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+        <li>Cheese</li>
+        <li>Apples</li>
+    </ul>
+    </p>
+
+    <p>This is a progress bar at 70%:
+    <progress value="0.7">Progress</progress>
+    </p>
+
+    <button>
+        Submit form
+    </button>
+
+</body>
 </html>
